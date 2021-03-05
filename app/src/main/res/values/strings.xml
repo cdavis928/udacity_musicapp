@@ -1,0 +1,5 @@
+<resources>
+    <string name="app_name">My Favorite DGD Albums</string>
+    <string name="now_playing_label">Now Playing</string>
+    <string name="songs_activity_label">Songs</string>
+</resources>

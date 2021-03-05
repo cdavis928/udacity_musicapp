@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <ImageView
+        android:id="@+id/album_art"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/artnotfound"
+        android:scaleType="centerCrop"
+        android:adjustViewBounds="true"
+        android:layout_alignParentTop="true"
+        />
+
+        <TextView
+            android:id="@+id/song_name_text_view"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/album_art"
+            android:text="Song name"
+            android:layout_centerInParent="true"
+            style="@style/songTitles_nowPlaying"/>
+
+        <TextView
+            android:id="@+id/artist_and_album_text_view"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/song_name_text_view"
+            android:layout_centerInParent="true"
+            android:text="Artist and Album name"
+            android:paddingBottom="16dp"
+            style="@style/artistAndAlbumInfo_nowPlaying"
+            />
+
+
+        <SeekBar
+            android:id="@+id/seek_bar"
+            android:layout_width="match_parent"
+            android:layout_height="15dp"
+            android:layout_below="@id/artist_and_album_text_view"
+            android:layout_marginBottom="20dp"
+            android:layout_marginRight="10dp"
+            android:layout_marginLeft="10dp"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="110dp"
+        android:orientation="horizontal"
+        android:layout_below="@id/seek_bar"
+        android:id="@+id/buttons_row"
+        android:paddingBottom="16dp">
+
+        <ImageView
+            android:id="@+id/back_button"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:src="@drawable/back"
+            android:layout_weight="1"
+            />
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_toLeftOf="@id/forward_button"
+            android:layout_toRightOf="@id/back_button"
+            android:src="@drawable/play"
+            android:layout_weight="1"
+            />
+        <ImageView
+            android:id="@+id/forward_button"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/forward"
+            android:layout_weight="1"
+
+            />
+    </LinearLayout>
+</RelativeLayout>
